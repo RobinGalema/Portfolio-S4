@@ -1,0 +1,204 @@
+body
+{
+    background: rgb(227, 223, 217);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+}
+
+header
+{
+    height: 9vh;
+    flex-basis: 100%;
+}
+
+#burgerMenu
+{
+    left: 95vw;
+    top: 3vw;
+    position: fixed;
+    text-align: right;
+    border-radius: 50px;
+    height: 3em;
+    width: 3em;
+    text-align: center;
+    font-size: 1rem;
+    background: none;
+    background-image: url(/Images/burgerManu_default.svg);
+    border-style: none;
+    cursor: pointer;
+    transition-duration: 500ms;
+
+    &:hover
+    {
+        background-image: url(/Images/burgerManu_hover.svg);
+    }
+}
+
+#landingContainer
+{
+    margin: auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    animation-name: landingHeader;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+    animation-timing-function: ease-out;
+}
+
+#landingContainer h1
+{
+    font-size: 8vh;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+}
+
+@keyframes landingHeader
+{
+    0% {padding-top: 1em; opacity: 0%;}
+    50% {opacity: 100%;}
+    100%{padding-top: 0em; opacity: 100%;}
+}
+
+#landingContainer p
+{
+    font-size: 2vh;
+    color: #000000;
+}
+
+#landingContent
+{
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    width: 70%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#landingContent img
+{
+    height: 40vh;
+    vertical-align: middle;
+}
+
+#portraitContainer
+{
+    flex-basis: 40%;
+    text-align: right;
+}
+
+#landingTextContent
+{
+    text-align: left;
+    flex-basis: 60%;
+}
+
+#landingButtonContainer
+{
+    display: flex;
+    justify-content: left;
+    margin-top: 7vh;
+}
+
+#mainButton
+{
+    height: 6vh;
+    margin-right: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.25vh;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-style: none;
+    background: linear-gradient(90deg, rgba(238,36,78,1) 0%, rgba(247,148,29,1) 100%); 
+    cursor: pointer;
+    transition-duration: 300ms;
+
+    &:hover{
+        background: linear-gradient(90deg, rgb(187, 27, 59) 0%, rgb(189, 113, 21) 100%);
+        border-radius: 25px;
+    }
+}
+
+#secondaryButton
+{
+    height: 6vh;
+    margin-right: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    border-radius: 15px;
+    padding-right: 2em;
+    padding-left: 2em;
+    background-color: rgba($color: #000000, $alpha: 0);
+    border-style: solid;
+    border-color: rgba(247,148,29,1);
+    cursor: pointer;
+    transition-duration: 300ms;
+    color: #0000009f;
+
+    &:hover
+    {
+        background: linear-gradient(90deg, rgb(187, 27, 59) 0%, rgb(189, 113, 21) 100%);
+        border-radius: 25px;
+        color: white;
+        border-style: none;
+    }
+}
+
+#pageContainer
+{
+    margin: 0;
+    background-color: rgb(215, 209, 203);
+    height: 100vh;
+    width: 100%;
+}
+
+#scrollText
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 2em;
+    animation-name: textScroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes textScroll
+{
+    0% {padding-top: 2em; opacity: 100%;}
+    25% {opacity: 95%;}
+    100% {padding-top: 3em; opacity: 0%;}
+}
+
+footer
+{
+    height: 25vh;
+    width: 100%;
+    background-color: rgb(189, 187, 185)
+}
+
+
