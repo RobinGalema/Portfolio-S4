@@ -8,7 +8,7 @@ window.onload = function()
     console.log("hello world");
     scrollText = document.getElementById("scrollText");
     brugerMenu = document.getElementById("burgerContainer");
-    this.document.addEventListener("keydown", keyDown)
+    document.addEventListener("keydown", keyDown)
 }
 
 window.onscroll = () =>
@@ -41,14 +41,21 @@ const toggleBurgerMenu = () =>
 {
     if (burgerMenuToggled == false)
     {
-        console.log("yeet");
         brugerMenu.style.display = "block";
+        burgerMenuToggled = true;
     }
 }
 
 const keyDown = (e) =>
 {
-    console.log(e.code);
+    if(e.code == "Escape")
+    {
+        if(burgerMenuToggled)
+        {
+            brugerMenu.style.display = "none";
+            burgerMenuToggled = false;
+        }
+    }
 }
 
 
