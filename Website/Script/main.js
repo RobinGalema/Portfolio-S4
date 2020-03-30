@@ -47,3 +47,23 @@ const keyDown = (e) => {
         }
     }
 }
+
+const homeButtonClicked = () =>
+{
+    document.location.href = "/index.html#landingContainer";
+    {
+        if (burgerMenuToggled)
+        {
+            toggleBurgerMenu();
+        }
+    }
+}
+
+const coursesButtonClicked = () =>
+{
+    document.location.href = "/index.html#pageContainer";
+    if (burgerMenuToggled)
+    {
+        toggleBurgerMenu();
+    }
+}
