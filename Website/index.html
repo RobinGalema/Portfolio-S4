@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="/Script/main.js"></script>
     <title>Robin Galema Portfolio</title>
 </head>
+
 <body>
     <div id="landingContainer">
         <header>
@@ -14,21 +16,30 @@
         </header>
         <button id="burgerMenu" onclick="toggleBurgerMenu()"></button>
         <div id="burgerContainer">
-        <div id="burgerOut">
+            <div id="burgerOut">
+                <button id="burgerMenuClose" onclick="toggleBurgerMenu()"></button>
+                <div id="burgerIconContainer">
+                    <hr><p class="menuText"><span>Home</span></p><hr>
+                    <p class="menuText"><span>Vakken</span></p><hr>
+                    <p class="menuText"><span>Contact</span></p><hr>
+                </div>
 
-        </div>
+            </div>
         </div>
         <div id="landingContent">
             <div id="landingTextContent">
                 <h1>Welkom!</h1>
-                <p>Hey, ik ben Robin en dit is mijn portfoliowebsite voor Media Design Semester 4. Op deze webpagina is al mijn gemaakte werk van dit semester te vinden. Voor het gemak is dit verdeeld over de verschillende vakken en zijn per vak de leeruitkomsten weergegeven. Klik op de knop hieronder om mijn portfolio te bekijken!</p>
+                <p>Hey, ik ben Robin en dit is mijn portfoliowebsite voor Media Design Semester 4. Op deze webpagina is
+                    al mijn gemaakte werk van dit semester te vinden. Voor het gemak is dit verdeeld over de
+                    verschillende vakken en zijn per vak de leeruitkomsten weergegeven. Klik op de knop hieronder om
+                    mijn portfolio te bekijken!</p>
                 <div id="landingButtonContainer">
                     <button id="mainButton" onclick="scrollToContent(`pageContainer`)">Check mijn portfolio!</button>
                     <button id="secondaryButton">Contactinformatie</button>
                 </div>
             </div>
             <div id="portraitContainer">
-            <img src="Images/character.svg" alt="Portrait">
+                <img src="Images/character.svg" alt="Portrait">
             </div>
         </div>
     </div>
@@ -44,4 +55,5 @@
 
     </footer>
 </body>
+
 </html>
