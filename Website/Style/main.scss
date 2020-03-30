@@ -2,12 +2,10 @@ body
 {
     background: rgb(227, 223, 217);
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 
 p
 {
-    font-family: Arial, Helvetica, sans-serif;
     color: #000000;
     font-size: 20px;
     margin-top: 0;
@@ -16,7 +14,6 @@ p
 
 h1
 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 80px;
 }
 
@@ -117,10 +114,11 @@ header
 
 #burgerIconContainer hr
 {
-    border-color: rgba(247,148,29,1);
     border-style: solid;
     border-width: 0.15em;
     border-radius: 50px;
+    border-image-source: linear-gradient(45deg, rgba(238,36,78,0.8), rgba(247,148,29,0.8));
+    border-image-slice: 1;
 }
 
 #landingContainer
@@ -197,7 +195,6 @@ header
 {
     height: 6vh;
     margin-right: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.25vh;
     color: white;
     font-weight: bold;
@@ -219,7 +216,6 @@ header
 {
     height: 6vh;
     margin-right: 2.5em;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 2vh;
     border-radius: 15px;
     padding-right: 2em;
@@ -250,7 +246,6 @@ header
 
 #scrollText
 {
-    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: lighter;
     text-align: center;
