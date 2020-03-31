@@ -263,6 +263,48 @@ header
     100% {padding-top: 3em; opacity: 0%;}
 }
 
+#pageContentContainer
+{
+    width: 60%;
+    margin: auto;
+    padding-top: 12.5vh;
+
+    h1
+    {
+        font-size: 8vh;
+        margin-bottom: 0.25em;
+    }
+}
+
+.courseContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    p
+    {
+        flex-basis: 25%;
+        text-align: center;
+        margin-top: 2em;
+        font-weight: lighter;
+    }
+}
+
+.courseButton
+{
+    margin:auto;
+    margin-top: 10vh;
+    width: 20%;
+    flex-basis: 20%;
+    align-content: space-between;
+
+    &:hover
+    {
+        background: rgba(0, 0, 0, 0.150);
+        border-radius: 50px;
+    }
+}
+
 footer
 {
     height: 25vh;

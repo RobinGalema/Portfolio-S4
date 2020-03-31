@@ -67,3 +67,9 @@ const coursesButtonClicked = () =>
         toggleBurgerMenu();
     }
 }
+
+const goToCourse = (course) =>
+{
+    console.log('yeet');
+    console.log(`/${course}.html`)
+}

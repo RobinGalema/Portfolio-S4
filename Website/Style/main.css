@@ -127,8 +127,6 @@ header {
           animation-name: landingHeader;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
@@ -306,6 +304,48 @@ header {
     padding-top: 3em;
     opacity: 0%;
   }
+}
+
+#pageContentContainer {
+  width: 60%;
+  margin: auto;
+  padding-top: 12.5vh;
+}
+
+#pageContentContainer h1 {
+  font-size: 8vh;
+  margin-bottom: 0.25em;
+}
+
+.courseContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.courseContainer p {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  text-align: center;
+  margin-top: 2em;
+  font-weight: lighter;
+}
+
+.courseButton {
+  margin: auto;
+  margin-top: 10vh;
+  width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.courseButton:hover {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
 }
 
 footer {
