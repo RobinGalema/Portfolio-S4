@@ -70,6 +70,6 @@ const coursesButtonClicked = () =>
 
 const goToCourse = (course) =>
 {
-    console.log('yeet');
     console.log(`/${course}.html`)
+    document.location.href = `/${course}.html`;
 }
