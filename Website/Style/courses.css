@@ -2,8 +2,6 @@
   margin: auto;
   width: 50%;
   padding-top: 12.5vh;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
 }
 
 #contentContainer #titleCard {
@@ -17,6 +15,10 @@
           justify-content: space-between;
   cursor: pointer;
   padding: 0em 2em 0em 2em;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 
 #contentContainer #titleCard h2 {
@@ -31,9 +33,15 @@
       align-self: flex-end;
 }
 
-#contentContainer #titleCard .courseContent p {
+#contentContainer #titleCard:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.courseContent p {
   font-weight: 350;
   font-size: 2vh;
+  padding-top: 1em;
 }
 
 .courseHidden {

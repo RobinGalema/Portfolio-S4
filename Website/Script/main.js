@@ -85,23 +85,21 @@ const showContent = (clickedNode, index) =>
         console.log(node);
         if (node.classList != null)
         {
-            console.log("its not null")
             if (node.classList.contains("courseContent"))
             {
-                console.log("it contains courseContent")
                 contentNodes.push(node);
             }
         }
     });
 
-    console.log(contentNodes);
-
     if (contentNodes[index].classList.contains("courseHidden"))
     {
         contentNodes[index].classList.remove("courseHidden");
+        clickedNode.style.padding = "0";
     }
-    else if (contentNodes[index].classList.length == 0)
+    else if (contentNodes[index].classList.length == 1)
     {
         contentNodes[index].classList.add("courseHidden");
+        clickedNode.style.padding = "0 2em 0 2em";
     }
 }
