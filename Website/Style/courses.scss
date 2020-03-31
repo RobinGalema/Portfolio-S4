@@ -1,0 +1,36 @@
+#contentContainer {
+    margin: auto;
+    width: 50%;
+    padding-top: 12.5vh;
+    transition-duration: 500ms;
+
+    #titleCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0em 2em 0em 2em;
+
+        h2 {
+            font-size: 3vh;
+            font-weight: 450;
+        }
+
+        p {
+            font-size: 3vh;
+            font-weight: 250;
+            align-self: flex-end;
+        }
+
+        .courseContent {
+            p {
+                font-weight: 350;
+                font-size: 2vh;
+            }
+        }
+    }
+}
+
+.courseHidden {
+    display: none;
+}

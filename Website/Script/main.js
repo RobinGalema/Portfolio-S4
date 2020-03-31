@@ -73,3 +73,35 @@ const goToCourse = (course) =>
     console.log(`/${course}.html`)
     document.location.href = `/${course}.html`;
 }
+
+const showContent = (clickedNode, index) =>
+{
+    let parentNode = clickedNode.parentNode;
+    let nodeList
+    nodeList = parentNode.childNodes;
+    let contentNodes = [];
+
+    nodeList.forEach(node => {
+        console.log(node);
+        if (node.classList != null)
+        {
+            console.log("its not null")
+            if (node.classList.contains("courseContent"))
+            {
+                console.log("it contains courseContent")
+                contentNodes.push(node);
+            }
+        }
+    });
+
+    console.log(contentNodes);
+
+    if (contentNodes[index].classList.contains("courseHidden"))
+    {
+        contentNodes[index].classList.remove("courseHidden");
+    }
+    else if (contentNodes[index].classList.length == 0)
+    {
+        contentNodes[index].classList.add("courseHidden");
+    }
+}
