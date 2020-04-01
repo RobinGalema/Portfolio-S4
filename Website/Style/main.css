@@ -1,11 +1,10 @@
 body {
   background: #e3dfd9;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
   color: #000000;
   font-size: 20px;
   margin-top: 0;
@@ -13,8 +12,25 @@ p {
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 80px;
+}
+
+#burgerContainer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#burgerOut {
+  position: fixed;
+  height: 100vh;
+  width: 30vw;
+  background: #e3dfd9;
+  left: 70vw;
 }
 
 header {
@@ -23,26 +39,76 @@ header {
       flex-basis: 100%;
 }
 
-#burgerMenu {
-  left: 95vw;
+#burgerMenu, #burgerMenuClose {
+  left: 93vw;
   top: 3vw;
   position: fixed;
   text-align: right;
   border-radius: 50px;
-  height: 3em;
-  width: 3em;
+  height: 4em;
+  width: 4em;
   text-align: center;
   font-size: 1rem;
   background: none;
-  background-image: url(/Images/burgerManu_default.svg);
   border-style: none;
   cursor: pointer;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
 }
 
+#burgerMenu {
+  background-image: url(/Images/burgerManu_default.svg);
+}
+
 #burgerMenu:hover {
   background-image: url(/Images/burgerManu_hover.svg);
+}
+
+#burgerMenuClose {
+  background-image: url(/Images/Close_Menu.svg);
+}
+
+#burgerMenuClose:hover {
+  background-image: url(/Images/Close_Menu_Hover.svg);
+}
+
+#burgerIconContainer {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  margin-top: 30%;
+}
+
+#burgerIconContainer .menuText {
+  font-size: 3.5vh;
+  margin: 0;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: #000000d4;
+  font-weight: lighter;
+}
+
+#burgerIconContainer .menuText span {
+  cursor: pointer;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+#burgerIconContainer .menuText span:hover {
+  padding: 10px 25% 10px 25%;
+  background: -webkit-gradient(linear, left top, right top, from(#ee244e), to(#f7941d));
+  background: linear-gradient(90deg, #ee244e 0%, #f7941d 100%);
+  border-radius: 100px;
+  color: white;
+}
+
+#burgerIconContainer hr {
+  border-style: solid;
+  border-width: 0.15em;
+  border-radius: 50px;
+  border-image-source: linear-gradient(90deg, rgba(238, 36, 78, 0.8) 0%, rgba(247, 148, 29, 0.8) 100%);
+  border-image-slice: 1;
 }
 
 #landingContainer {
@@ -61,8 +127,6 @@ header {
           animation-name: landingHeader;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
@@ -148,7 +212,6 @@ header {
 #mainButton {
   height: 6vh;
   margin-right: 1.5em;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 2.25vh;
   color: white;
   font-weight: bold;
@@ -164,20 +227,19 @@ header {
 }
 
 #mainButton:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#bb1b3b), to(#bd7115));
-  background: linear-gradient(90deg, #bb1b3b 0%, #bd7115 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 36, 78, 0.8)), to(rgba(247, 148, 29, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 36, 78, 0.8) 0%, rgba(247, 148, 29, 0.8) 100%);
   border-radius: 25px;
 }
 
 #secondaryButton {
   height: 6vh;
   margin-right: 2.5em;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 2vh;
   border-radius: 15px;
   padding-right: 2em;
   padding-left: 2em;
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
   border-style: solid;
   border-color: #f7941d;
   cursor: pointer;
@@ -187,8 +249,8 @@ header {
 }
 
 #secondaryButton:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#bb1b3b), to(#bd7115));
-  background: linear-gradient(90deg, #bb1b3b 0%, #bd7115 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 36, 78, 0.8)), to(rgba(247, 148, 29, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 36, 78, 0.8) 0%, rgba(247, 148, 29, 0.8) 100%);
   border-radius: 25px;
   color: white;
   border-style: none;
@@ -196,13 +258,12 @@ header {
 
 #pageContainer {
   margin: 0;
-  background-color: #d7d1cb;
+  background-color: #ded9d2;
   height: 100vh;
   width: 100%;
 }
 
 #scrollText {
-  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: lighter;
   text-align: center;
@@ -245,9 +306,51 @@ header {
   }
 }
 
+#pageContentContainer {
+  width: 60%;
+  margin: auto;
+  padding-top: 12.5vh;
+}
+
+#pageContentContainer h1 {
+  font-size: 8vh;
+  margin-bottom: 0.25em;
+}
+
+.courseContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.courseContainer p {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  text-align: center;
+  margin-top: 2em;
+  font-weight: lighter;
+}
+
+.courseButton {
+  margin: auto;
+  margin-top: 10vh;
+  width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.courseButton:hover {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+}
+
 footer {
   height: 25vh;
   width: 100%;
-  background-color: #bdbbb9;
+  background-color: #d3ccc3;
 }
 /*# sourceMappingURL=main.css.map */

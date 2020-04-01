@@ -1,0 +1,50 @@
+#contentContainer {
+  margin: auto;
+  width: 50%;
+  padding-top: 12.5vh;
+}
+
+#contentContainer #titleCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 0em 2em 0em 2em;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+#contentContainer #titleCard h2 {
+  font-size: 3vh;
+  font-weight: 450;
+}
+
+#contentContainer #titleCard p {
+  font-size: 3vh;
+  font-weight: 250;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#contentContainer #titleCard:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.courseContent p {
+  font-weight: 350;
+  font-size: 2vh;
+  padding-top: 1em;
+}
+
+.courseHidden {
+  display: none;
+}
+/*# sourceMappingURL=courses.css.map */
