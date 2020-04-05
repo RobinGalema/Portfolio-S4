@@ -2,6 +2,20 @@
   margin: auto;
   width: 50%;
   padding-top: 12.5vh;
+  padding-bottom: 12.5vh;
+}
+
+#contentContainer h1 {
+  font-size: 5vh;
+}
+
+#contentContainer p {
+  padding-bottom: 10px;
+}
+
+#contentContainer li {
+  font-size: 2vh;
+  padding-bottom: 1em;
 }
 
 #contentContainer #titleCard {
@@ -46,5 +60,38 @@
 
 .courseHidden {
   display: none;
+}
+
+.formEmbed {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.docEmbed {
+  width: 90%;
+  height: 540px;
+  display: block;
+  margin: auto;
+  border: none;
+}
+
+.learningTag {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 36, 78, 0.8)), to(rgba(247, 148, 29, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 36, 78, 0.8) 0%, rgba(247, 148, 29, 0.8) 100%);
+  padding: 0.5em;
+  border-radius: 25px;
+  color: white;
+}
+
+.imageContainer {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.imageContainer img {
+  width: 47%;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=courses.css.map */
