@@ -40,8 +40,35 @@
             <p>V</p>
         </div>
         <div id="courseContent" class="courseContent courseHidden">
-            <p> <b>What is Lorem Ipsum?</b><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p><span class="learningTag">Ontwikkelomgeving</span></p>
+            <p> <b>Inleiding</b><br>
+                Voor het maken van deze portfoliowebsite wilde ik mezelf aan gaan leren om SASS te gaan gebruiken in plaats van normaal CSS. Ik heb hierover namelijk vorig semester een paar keer over gelezen en het leek mijeen leuk idee om te experimenteren met SASS en de functies hiervan. Aangezien ik mijn portfoliowebsite zelf wilde maken en geen template wilde gebruiken leek mij dit een prima gelegenheid om SASS te gaan gebruiken. Hoe ik hiermee werk zal onder dit kopje beschreven staan.
+            </p>
+            <p><b>Orientatie & Eerste gebruik</b><br>
+                Omdat ik over het algemeen nog niet veel wist over de functies van SASS en alle mogelijkheden van SASS ben ik begonnen met het kijken van een Crash Course SASS op YouTube. In deze video wordt in 45 minuten een responsive webpagina gebouwd met behulp van SASS.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/roywYSEPSvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="formEmbed"></iframe>
+            <p>
+                Na het kijken van deze video ben ik begonnen met het maken van mijn portfoliowebsite. Over de opzet hiervan staat meer beschreven bij het kopje "Opbouw Portfoliowebsite". Ik heb voor mijn IDE (Visual Studio Code) een Live SASS Compiler geinstalleerd die SASS uit mijn .SCSS bestand automatisch omzet naar CSS zodat mijn site in elke browser goed weergegeven wordt. Vervolgens ben ik begonnen met het bouwen van mijn landing-pagina en heb ik de hele tijd in mijn .SCSS bestand gewerkt en geprobeerd, waar het mogelijk was, om de functionaliteit van SASS te gebruiken.
+            </p>
+            <p><b>Gebruik tot nu toe</b><br>
+            Tot nu toe gebruik ik een aantal handigheidjes die SASS biedt tegenover normaal CSS. In de onderstaande code-snippet is te lezen hoe ik een variable in SASS gebruik om al mijn verschillende kleurcodes op te slaan en deze vervolgens met een functie toewijs.
+            </p>
+            <script async src="//jsfiddle.net/Robin99G/q4my6bx8/embed/css/"></script>
+            <p>
+                Bovenin mijn .SCSS bestand declareer ik alle kleuren die ik op mijn pagina ga gebruiken met een variabele. Vervolgens maak ik een functie die de map-get functie van css uitvoert en automatisch een van de 2 parameters invult, hierdoor hoef je alleen nog maar de kleur aan te geven die je wilt gebruiken. Hierdoor hoef ik alleen maar de naam van de kleur te typen en niet bij elk element opnieuw de rgba code invullen. Ook is het zo makkelijker om een aanpassing in het kleurenschema te maken omdat ik maar op een plaats de rgba waarde hoef aan te passen en vervolgens alle elementen met deze kleur automatisch geupdate worden. <br><br>
+
+                Naast deze variable gebruik ik ook nesting van bijvoorbeeld de :hover. In SCSS hoef ik deze niet apart in een nieuw blok te zetten maar kan ik deze nesten in de css van het element zelf zoals in het voorbeeld hieronder.
+            </p>
+            <script async src="//jsfiddle.net/Robin99G/q4my6bx8/2/embed/css/"></script>
+            <p>
+                In dit stukje SCSS staan p en a als child van courseContent, iets wat met normaal CSS ook mogelijk is. Bij de a staat nu echter ook de &:hover en de &:visited meteen in hetzelfde blok waar deze normaal apart moeten worden opgescreven. Op deze manier heb ik een beter overzicht van al mijn events en kan ik in een keer zien bij welk element ze horen.
+            </p>
+
+            <p><b>Reflectie tot nu toe</b> <br>
+                Tot nu toe vind ik het erg fijn om met SASS te werken aangezien het een uitbreiding is op normaal CSS en een aantal handige onderdelen toevoegd die het schrijven van CSS makkelijker en overzichtenlijker maken. Daarnaast was de basis van SASS makkelijk te leren. Ik heb nu de basis van SASS onder de knie en ik ben van plan om ook in de toekomst SASS verder te blijven gebruiken bij het maken van deze website en nog meer functionaliteit ervan toe te passen. Daarnaast denk ik dat ik vanaf nu SASS ook standaard wil gaan gebruiken ald onderdeel van mijn workflow als het gaat om het ontwikkelen van websites of online applicaties nu ik geleerd heb hoe handig de functies ervan kunnen zijn.
+            </p>
+
         </div>
         <hr>
         <div id="titleCard" onclick="showContent(this, 1)">
@@ -49,17 +76,42 @@
             <p>V</p>
         </div>
         <div class="courseContent courseHidden">
-            <p> <b>What is Lorem Ipsum?</b><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p><span class="learningTag">Ontwikkelomgeving | Beheerbaarheid</span></p>
+            <p> <b>Inleiding</b><br>
+                Onder dit kopje wil ik gaan beschrijven hoe ik mijn portfoliowebsite heb gemaakt. Ik wil dit kopje dus tijdens het semester blijven updaten met nieuwe dingen die ik heb gemaakt voor mijn website. Voor nu beschrijf ik hier de eerste opzet, de GitHub repository en mijn manier van werken met html, scss en javascript.
+            </p>
+            <p> <b>Opzet website</b><br>
+                Aangezien ik voor semester 4 opnieuw een digitaal Portfolio ging maken en ik daarnaast ook nog een portfoliowebsite voor stage wilde gaan maken heb ik besloten om een eigen domein te laten hosten. Ik heb het domein RobinGalema.nl gekocht en hiervoor hosting aangeschaft. <br><br>
+                Vervolgens heb ik een <a href="https://github.com/RobinGalema/Portfolio-S4">repository op GitHub aangemaakt</a> waarmee ik het versiebeheer van mijn website ga bijhouden. Voor het ontwikkelen van mijn website heb ik ervoor gekozen om deze zelf te maken in plaats van een cms zoals WordPress of Webflow te gebruiken omdat ik het leuk vind om zelf mijn site te maken en graag complete vrijheid over de look van de site wil hebben. Daarnaast kan ik dan ook nog oefenen met het zelf maken van een website en het gebruik van html, css en javascript. <br><br>
+                Het maken van de website doe ik met Visual Studio Code en voor dit semester heb ik besloten om te gaan werken met SASS waarover meer staat beschreven in het kopje hieboven. Na het installeren van de SASS live compiler en het aanzetten van mijn Live Server ben ik begonnen met het maken van mijn website.
+            </p>
+
+            <p><b>Website tot nu toe</b> <br>
+                Tot nu toe heb ik de basis voor de website gemaakt met voor alle vakken een aparte pagina en een algemene landing pagina. De opdrachten staan momenteel gewoon als tekst in mijn html bestanden. In de toekomst wil ik kijken of ik deze content op een andere manier kan inladen zodat ik niet altijd mijn html hoef te bewerken om een aanpassing in de tekst te maken (met json bijvoorbeeld). <br>
+                Daarnaast gebruik ik nu een beetje javascript om bijvoorbeeld op de landing-pagina naar beneden te scrollen naar de vakken en om het burger-menu te tonen en te verbergen. <br><br>
+                Bij het schrijven van mijn code probeer ik over eenzeldfde notatie te gebruiken zodat al mijn code overzichtenlijk blijft. Ook geef ik elke functie een beschrijving met Jsdoc. Mijn eigen geschreven code is te lezen <a href="https://github.com/RobinGalema/Portfolio-S4/blob/master/Website/Script/main.js">door op dit linkje te klikken.</a><br><br>
+                Als voorbeeld staat hieronder een snippet uit mijn code waarin de functionaliteit van het openen en sluiten van het burgermenu geregeld wordt.
+            </p>
+            <script async src="//jsfiddle.net/Robin99G/q4my6bx8/3/embed/js/"></script>
         </div>
         <hr>
         <div id="titleCard" onclick="showContent(this, 2)">
-            <h2>Technisch Prototype</h2>
+            <h2>Gebruik van Git</h2>
             <p>V</p>
         </div>
         <div class="courseContent courseHidden">
-            <p> <b>What is Lorem Ipsum?</b><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p><span class="learningTag">Ontwikkelomgeving | Beheerbaarheid</span></p>
+            <p> <b>Inleiding</b><br>
+                Voor mijn portfoliowebsite en voor de proftaak gebruik ik GitHub voor mijn dev werk te beheren. Voor mijn website zal ik de laatste nieuwe versies bijhouden op GitHub zodat ik altijd een up-to-date versie online heb staan voor het geval er iets mis mocht gaan met de bestanden op de server of met mijn lokale bestanden. Voor de proftaak zullen we git hier natuurlijk ook voor gebruiken en daarnaast zullen we ook gebruik gaan maken van branches om samen aan ons project te werken en onderdelen van het product samen te ontwikkelen en deze delen vervolgens samen te voegen.
+            </p>
+            <p><b>Git tot nu toe</b><br>
+                Op dit moment ben ik alleen met mijn portfoliowebsite actief met Git bezig. Ik probeer elke keer dat ik een aantal aanpassingen doe deze in een commit te zetten en deze vervolgens naar een DEV branch te pushen zodat ik deze veilig online heb staan. Als een deel van de website af is en functioneert zoals het bedoeld is, merge ik dit stuk met master zodat hierin altijd de meest recente, werkende versie van mijn website staat.
+            </p>
+            <p>
+            <a href="https://github.com/RobinGalema/Portfolio-S4">Link naar mijn website Repo</a><br>
+            <a href="https://github.com/RobinGalema/Brainport-Groep-1">Link naar de repo voor onze proftaak</a><br>
+            <a href="https://github.com/RobinGalema?tab=repositories">Link naar mijn GitHub account om alle projecten/ repo's te zien</a> 
+            </p>
         </div>
         <hr>
     </div>
