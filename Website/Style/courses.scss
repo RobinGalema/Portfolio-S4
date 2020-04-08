@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 $colors:(
     backgroundPrimary: rgb(227, 223, 217),
     backgroundSecondary: darken(rgb(227, 223, 217), 2.5%),
     footer: darken(rgb(227, 223, 217), 7.5%),
     standardGradient: linear-gradient(90deg, rgba(238,36,78,1) 0%, rgba(247,148,29,1) 100%),
-    darkerGradient: linear-gradient(90deg, rgba(238,36,78,0.8) 0%, rgba(247,148,29,0.8) 100%)
+    darkerGradient: linear-gradient(90deg, rgba(238,36,78,0.8) 0%, rgba(247,148,29,0.8) 100%),
+    Orange: rgba(247,148,29,0.8)
 );
 
 @function setColor($colorName)
 {
     @return map-get($colors , $colorName)
 };
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
 
 #contentContainer {
     margin: auto;
@@ -102,5 +110,32 @@ $colors:(
     {
         width: 47%;
         vertical-align: middle;
+    }
+}
+
+.fullWidthImage
+{
+    display: block;
+    max-width: 95%;
+    margin: auto;
+    margin-bottom: 25px;
+    max-height: 50vh;
+}
+
+a{
+    text-decoration: none;
+    color: setColor(Orange);
+    cursor: pointer;
+    transition-duration: 500ms;
+
+    &:visited
+    {
+        text-decoration: none;
+        color: setColor(Orange);
+    }
+
+    &:hover
+    {
+        text-decoration: underline;
     }
 }
