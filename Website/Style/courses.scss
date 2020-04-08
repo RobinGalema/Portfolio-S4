@@ -70,24 +70,6 @@ body
         font-size: 2vh;
         padding-top: 1em;
     }
-
-    a{
-        text-decoration: none;
-        color: setColor(Orange);
-        cursor: pointer;
-        transition-duration: 500ms;
-
-        &:visited
-        {
-            text-decoration: none;
-            color: setColor(Orange);
-        }
-
-        &:hover
-        {
-            text-decoration: underline;
-        }
-    }
 }
 
 .courseHidden {
@@ -138,4 +120,22 @@ body
     margin: auto;
     margin-bottom: 25px;
     max-height: 50vh;
+}
+
+a{
+    text-decoration: none;
+    color: setColor(Orange);
+    cursor: pointer;
+    transition-duration: 500ms;
+
+    &:visited
+    {
+        text-decoration: none;
+        color: setColor(Orange);
+    }
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
 }
