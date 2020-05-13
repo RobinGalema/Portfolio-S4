@@ -24,14 +24,8 @@ body {
 }
 
 #contentContainer #titleCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: inline-block;
+  width: 92%;
   cursor: pointer;
   padding: 0em 2em 0em 2em;
   -webkit-transition-duration: 250ms;
@@ -43,13 +37,24 @@ body {
 #contentContainer #titleCard h2 {
   font-size: 3vh;
   font-weight: 450;
+  float: left;
 }
 
 #contentContainer #titleCard p {
   font-size: 3vh;
   font-weight: 250;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  float: right;
+}
+
+#contentContainer #titleCard h3 {
+  font-size: 2vh;
+  padding-top: 13px;
+  margin-left: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 36, 78, 0.8)), to(rgba(247, 148, 29, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 36, 78, 0.8) 0%, rgba(247, 148, 29, 0.8) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  float: left;
 }
 
 #contentContainer #titleCard:hover {
@@ -61,6 +66,27 @@ body {
   font-weight: 350;
   font-size: 2vh;
   padding-top: 1em;
+}
+
+.courseContent ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.courseContent li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 350;
+}
+
+.courseContent .titleTag {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 36, 78, 0.8)), to(rgba(247, 148, 29, 0.8)));
+  background: linear-gradient(90deg, rgba(238, 36, 78, 0.8) 0%, rgba(247, 148, 29, 0.8) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 10px;
 }
 
 .courseHidden {

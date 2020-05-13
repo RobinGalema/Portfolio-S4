@@ -129,10 +129,12 @@ const showContent = (clickedNode, index) =>
     {
         contentNodes[index].classList.remove("courseHidden");
         clickedNode.style.padding = "0";
+        clickedNode.style.width = "100%";
     }
     else if (contentNodes[index].classList.length == 1)
     {
         contentNodes[index].classList.add("courseHidden");
         clickedNode.style.padding = "0 2em 0 2em";
+        clickedNode.style.width = "92%";
     }
 }

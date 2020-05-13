@@ -97,6 +97,7 @@
         <hr>
         <div id="titleCard" onclick="showContent(this, 2)">
             <h2>Gebruik van Git</h2>
+            <h3>Updated </h3>
             <p>V</p>
         </div>
         <div class="courseContent courseHidden">
@@ -107,10 +108,82 @@
             <p><b>Git tot nu toe</b><br>
                 Op dit moment ben ik alleen met mijn portfoliowebsite actief met Git bezig. Ik probeer elke keer dat ik een aantal aanpassingen doe deze in een commit te zetten en deze vervolgens naar een DEV branch te pushen zodat ik deze veilig online heb staan. Als een deel van de website af is en functioneert zoals het bedoeld is, merge ik dit stuk met master zodat hierin altijd de meest recente, werkende versie van mijn website staat.
             </p>
+            <p><b>Samenwerkingsafspraken</b> <b class="titleTag">NEW</b><br>
+                Aan het begin van de eerste srpint hebben we een aantal afspraken gemaakt met de progtaakgroep over het gebruik van git en het schrijven van code zodat we hiermee allemaal op een lijn zitten. We hebben afgesproken om een repository te gebruiken voor al onze prototypes en deze te verdelen over individuele branches. Verder maken we voor elk prototype nog extra branches wanneer er meerdere mensen een prototype wordt gewerkt om conflicten te voorkomen. Doordat iedereen zijn eigen GitHub account gebruikt komt er een goed inzhicht wie waar heeft bijgedragen aan de hand van de commits. <br><br>
+                Verder hebben we afgesproken om bij het maken functies altijd gebruik te maken van Jsdoc om de functie te beschrijven en dat we deze beschrijving altijd in het engels schrijven. Ook namen van variabele en functies zullen allemaal in het engels geschreven worden waarbij gebruikt wordt gemaakt van camelcasing. Op deze manier willen we onze code zo consequent mogelijk te schrijven en ervoor te zorgen dat iedereen binnen de groep altijd een makkelijk overzicht van functies en hun functionaliteit heeft.
+            </p>
             <p>
             <a href="https://github.com/RobinGalema/Portfolio-S4">Link naar mijn website Repo</a><br>
             <a href="https://github.com/RobinGalema/Brainport-Groep-1">Link naar de repo voor onze proftaak</a><br>
             <a href="https://github.com/RobinGalema?tab=repositories">Link naar mijn GitHub account om alle projecten/ repo's te zien</a> 
+            </p>
+        </div>
+        <hr>
+        <div id="titleCard" onclick="showContent(this, 3)">
+            <h2>Architectuurdiagram</h2> 
+            <h3>NEW</h3>
+            <p>V</p>
+        </div>
+        <div class="courseContent courseHidden">
+            <p><span class="learningTag">Architectuur</span></p>
+            <p> <b>Inleiding</b><br>
+                Aan het einde van Gate 2 heb ik voor ons nieuwe concept een eerste Architectuurdiagram gemaakt. In dit diagram heb ik geprobeerd alle technische onderdelen te koppelen aan elkaar en na te denken over hoe onze uiteindelijke applicatie eruit komt te zien.
+            </p>
+            <p><b>Het diagram</b><br>
+                Voor het maken van het diagram heb ik eerst alle onderdelen van het museum die hiervoor relevant zijn opgeschreven. Dit zijn de volgende onderdelen:
+                <ul>
+                    <li>Het hologram</li>
+                    <li>De interactieve kaart</li>
+                    <li>Een video-display</li>
+                    <li>De mini-game</li>
+                    <li>De lamp met afstandsensor</li>
+                </ul>
+            </p>
+            <p>
+                Vervolgens ben ik op <a href="https://app.diagrams.net/" target="_blank">draw.io</a> begonnen met deze onderdelen aan elkaar te linken en na te denken welke andere onderdelen er nog nodig zijn om de applicatie werkend te maken. <br>
+                Uiteindelijk heb ik het volgende diagram gemaakt voor ons mini-museum.
+            </p>
+            <img src="/Images/ADiagramDEV.png" alt="Architectuurdiagram" width="50%" class="fullWidthImage">
+            <p>
+                Voor het maken van dit diagram ben ik er van uit gegaan dat het hele museum vanuit een centrale applicatie draait. Dit willen we graag aangezien we op deze manier alle onderdelen tegelijk kunnen besturen. Hierdoor kunnen we als er niemand in de buurt is bijvoorbeeld alle video's stop zetten en schermen en lampjes uitzetten om stroom te besparen en vervolgens deze allemaal weer aan te zetten als er iemand in de buurt van het museum komt. Ook kunnen we zo onderdelen op elkaar afstemmen. Denk bijvoorbeeld aan het hologram dat veranderd op basis van het geselecteerde bedrijf op onze Brainport kaart.
+            </p>
+            <p><b>Reflectie</b><br>
+                Het maken van het diagram is vind ik goed gegaan, dit ook omdat we vooraf een aantal onderdelen van de installatie goed met de groep hebben besproken. Vervolgens heb ik redelijk eenvoudig een diagram in elkaar kunnen zetten voor onze applicatie. Toen we zijn begonnen met de eerste sprint ben ik met een deel van het diagram aan de slag gegaan. Aan alle onderdelen van het diagram kunnen we in de sprints user stories koppelen op het moment dat we aan deze gaan werken. <br><br>
+                Zo heb ik in de eerste sprint aan de lamp gewerkt waarbij de volgende user story hoorde: "Als student wil ik dat het museum op mijn aanwezigheid reageert en daardoor mijn aandacht trekt." en waarbij weer een aantal kleinere tasks hoorden. Deze heb ik vervolgens met het architectuurdiagram in mijn achterhoofd kunnen uitvoeren. <br>
+                Door een architectuurdiagram vooraf op te stellen heb ik tijdens het uitwerken van de losse onderdelen een beter beeld gekregen over hoe ik dit onderdeel in elkaar kon zetten en hoefde ik niet meer na te denken over hoe ik mijn prototype hoefde op te bouwen aangezien ik dit al bij het diagram heb gedaan. Dit is erg handig en hierdoor kan ik meteen aan de slag met het maken van de prototypes.
+            </p>
+        </div>
+        <hr>
+        <div id="titleCard" onclick="showContent(this, 4)">
+            <h2>Prototype Afstanddetectie</h2> 
+            <h3>NEW</h3>
+            <p>V</p>
+        </div>
+        <div class="courseContent courseHidden">
+            <p><span class="learningTag">Architectuur | Beheerbaarheid</span></p>
+            <p> <b>Inleiding</b><br>
+                Voor het mini-museum willen we een lamp plaatsen die aangaat op basis van de aanwezigheid van een persoon rondom het museum. Als deze persoon binnen een bepaalde afstand van het museum komt moet deze lamp aangaan. Daarnaast moet de intensiteit van de lamp bepaald worden door de afstand van de dichtsbijzijnde persoon. <br><br>
+                Om hier een simpel proof of concept van te maken ben ik aan de slag gegaan met een Arduino, een SR04 afstandsensor en de Johnny Five npm package.
+            </p>
+            <p><b>Werkwijze</b><br>
+                Voor het maken van deze POC heb ik gewerkt met een Arduino en de <a href="https://opencircuit.nl/Blog/De-HC-SR04-ultrasonische-afstands-detectie-module" target="blank">SR04 afstandsensor</a>. Nadat ik de afstandsensor op de Arduino had aangesloten heb ik na een beetje puzzelen de juiste firmata op de Arduino geinstalleerd die voor Johnny Five nodig was. Daarna ben ik begonnen met het opzetten van een lokale server met NodeJS en heb ik het <a href="http://johnny-five.io/examples/proximity-hcsr04/" target="blank">Johnny Five npm pakket</a> geïnstalleerd. <br><br>
+                Nadat alles opgezet was ben ik begonnen met het uitlezen van de afstandsensor. Deze stuurt de afstand naar het dichtsbijzijnde object binnen 5 meter in centimeters door. Met behulp van deze waarde en een paar functies heb ik 2 prototypes gemaakt. Bij een prototype wordt de inhoud van een html pagina aangepast als er een voorwerp binnen 30cm van de sensor komt. Bij het andere prototype wordt de intensiteit van de achtergrondkleur op de webpagina aangepast op basis van de afstand tot het voorwerp. Van beide onderdelen staat hier een filmpje weergegeven:
+            </p>
+            <iframe src="https://drive.google.com/file/d/1XoJSVbvgoNgGimIN5C6Apukiai2ynabk/preview"class="docEmbed"></iframe> <br>
+            <iframe src="https://drive.google.com/file/d/1xMvudvkdYxNJmChYGUzPV8ZqIoaMLX_y/preview"class="docEmbed"></iframe>
+            <p>
+                Hieronder staat een stukje code uit de server waarbij wordt gedetecteerd als er een object in de range van de sensor komt:
+            </p>
+            <script async src="//jsfiddle.net/Robin99G/6wk91v7r/embed/js/"></script>
+            <p>
+                En hieronder staat een stukje code dat ervoor zorgt dat de alpha van de achtergrondkleur veranderd als een object dichterbij of verder van de sensor af beweegt:
+            </p>
+            <script async src="//jsfiddle.net/Robin99G/6wk91v7r/3/embed/js/"></script>
+            <p>
+                De gehele code en alle commits voor deze POC zijn de vinden in via <a href="https://github.com/RobinGalema/Brainport-Groep-1/commits/ArduinoPOC" target="blank">deze link</a> naar de branch voor dit prototype.
+            </p>
+            <p><b>Reflectie</b><br>
+                Bij het maken van deze POC heb ik vooral een deel van mjn javascript kennis toegepast en herhaald. Het maken van deze POC ging opzich goed alleen duurde het in het begin lang om de goede firmata op mijn Arduino te krijgen doordat mijn MacBook constant geen permissie gaf om deze te installeren. Na even googlen heb ik dit op kunnen lossen en ben ik tijdens het maken van de code eigenlijk geen problemen tegengekomen. Ik volgens de afspraak binnen onze groep gewerkt aan de code, dat betekend dat ik Jsdoc heb gebruikt om functies te beschrijven en variabele in het engels en met camelcasing geschreven heb. <br><br> Deze POC was uiteindelijk een simpele manier om het meten van afstand het uitvoeren van functies op basis hiervan uit te proberen. Echter willen we bij het daadwerkelijke product een ander soort sensor dan een ultrasone gebruiken omdat deze een aantal nadelen heeft zoals dat je deze niet kan wegwerken in het museum omdat deze dan niet meer werkt en omdat je aan elke kant van het museum meerdere van deze sensoren nodig hebt om aan alle kanten van het museum te kunnen meten. Hiervoor moeten we nog gaan zoeken naar een betere oplossing.
             </p>
         </div>
         <hr>

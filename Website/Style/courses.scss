@@ -37,9 +37,8 @@ body
     }
 
     #titleCard {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: inline-block;
+        width: 92%;
         cursor: pointer;
         padding: 0em 2em 0em 2em;
         transition-duration: 250ms;
@@ -48,12 +47,25 @@ body
         h2 {
             font-size: 3vh;
             font-weight: 450;
+            float: left;
         }
 
         p {
             font-size: 3vh;
             font-weight: 250;
-            align-self: flex-end;
+            float: right;
+        }
+
+        h3
+        {
+            font-size: 2vh;
+            padding-top: 13px;
+            margin-left: 20px;
+            background: setColor(darkerGradient);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            float: left;
+
         }
 
         &:hover
@@ -69,6 +81,29 @@ body
         font-weight: 350;
         font-size: 2vh;
         padding-top: 1em;
+    }
+
+    ul
+    {
+        margin: 0;
+        padding: 0;
+        margin-left: 15px;
+    }
+
+    li
+    {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        font-weight: 350;
+    }
+
+    .titleTag
+    {
+        background: setColor(darkerGradient);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 10px;
     }
 }
 
